@@ -1,4 +1,5 @@
 import "./globals.css";
+import SupabaseListener from "@/components/supabaseListener";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,7 +9,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="Ja">
-      <body>{children}</body>
+      <body>
+        <div>
+          <SupabaseListener />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
